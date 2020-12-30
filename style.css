@@ -25,7 +25,7 @@ html {
 }
 
 .box {
-    width: 20vw;
+    width: 22vw;
     height: 60vh;
     border-radius: 0.5rem;
     box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.2);
@@ -130,7 +130,7 @@ html {
 .temp {
     margin-top: 2.5rem;
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .tempmin_max {
