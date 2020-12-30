@@ -11,11 +11,8 @@ const getCurrrentDate = () => {
     const currentMonth = currentDate.getMonth();
     const currentDayByMonth = currentDate.getDate();
     const hour = currentDate.getHours();
-    const minutes = currentDate.getMinutes();
+    const minutes = currentDate.getMinutes() < 10 ? "0" + currentDate.getMinutes() : currentDate.getMinutes();
     const time = hour > 12 ? `${hour - 12}:${minutes} PM ` : `${hour}:${minutes} AM`;
-    console.log(time);
-    dateDiv.innerText = `
-        ${ month[currentMonth] }
-        ${ currentDayByMonth } | ${ days[currentDay] } | ${time}`;
+    dateDiv.innerText = ` ${ days[currentDay] } | ${ month[currentMonth] } ${ currentDayByMonth } | ${time}`;
 }
 getCurrrentDate();
