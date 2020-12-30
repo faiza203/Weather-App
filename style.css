@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    /* font-family: "Jost", sans-serif; */
     font-family: "Quicksand", sans-serif;
 }
 
@@ -103,6 +102,11 @@ html {
 
 .fa-street-view {
     animation: rotates 3s linear infinite alternate;
+    color: #fff
+}
+
+.fa-sun {
+    color: #eccc68
 }
 
 @keyframes rotates {
