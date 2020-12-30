@@ -1,7 +1,6 @@
 const dateDiv = document.getElementById("date");
 const weatherCondition = document.getElementById("weathercon");
 
-const tempStatus = "Clouds";
 const currentDate = new Date();
 
 const getCurrrentDate = () => {
