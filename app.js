@@ -10,7 +10,12 @@ const getCurrrentDate = () => {
     const month = ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "Sep", "Oct", "Nov", "Dec"]
     const currentMonth = currentDate.getMonth();
     const currentDayByMonth = currentDate.getDate();
-    console.log(currentDayByMonth);
-    dateDiv.innerText = `${month[currentMonth]} ${currentDayByMonth} |${days[currentDay]}| `;
+    const hour = currentDate.getHours();
+    const minutes = currentDate.getMinutes();
+    const time = hour > 12 ? `${hour - 12}:${minutes} PM ` : `${hour}:${minutes} AM`;
+    console.log(time);
+    dateDiv.innerText = `
+        ${ month[currentMonth] }
+        ${ currentDayByMonth } | ${ days[currentDay] } | ${time}`;
 }
 getCurrrentDate();
