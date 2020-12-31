@@ -9,6 +9,7 @@
     "author": "Faiza Fiaz",
     "license": "ISC",
     "dependencies": {
+        "dotenv": "^8.2.0",
         "requests": "^0.3.0"
     }
 }
