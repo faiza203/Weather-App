@@ -5,8 +5,9 @@ const requests = require("requests");
 const htmlFile = fs.readFileSync("index.html", "utf-8")
 
 const replaceval = (tempVal, orgVal) => {
-    let location = tempVal.replace("{%location%}", orgVal.name)
-    return location;
+    let temperature = tempVal.replace("{%location%}", orgVal.name)
+    temperature = temperature.replace("{%country%}", orgVal.sys.country)
+    return temperature;
 }
 
 const server = http.createServer((req, res) => {
