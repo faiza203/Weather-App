@@ -226,7 +226,7 @@
         <p id="date"></p>
         <h1 class="temp">{%temperature%}</h1>
         <h3 class="tempmin_max">
-            {%temp_min%} | Max C
+            {%temp_min%} | {%temp_max%}
         </h3>
       </div>
     </div>
@@ -235,9 +235,9 @@
 <script>
 const dateDiv = document.getElementById("date");
   const weatherCondition = document.getElementById("weathercon");
-  
+  const tempStatus = "{%tempstatus%}";
   const currentDate = new Date();
-  
+  console.log(tempStatus);
   const getCurrrentDate = () => {
       const currentDay = currentDate.getDay();
       const days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sunday"];
