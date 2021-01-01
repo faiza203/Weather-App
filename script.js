@@ -5,6 +5,8 @@ require("dotenv").config({
     path: __dirname + "/.env",
 });
 
+const port = process.env.PORT || 8000;
+
 const htmlFile = fs.readFileSync("index.html", "utf-8");
 
 const replaceval = (tempVal, orgVal) => {
@@ -43,4 +45,4 @@ const server = http.createServer((req, res) => {
     }
 });
 console.log("Name: ", process.env["NAME"]);
-server.listen(8000, "127.0.0.1");
+server.listen(port, "127.0.0.1");
